@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+
+    /*
+    console.log(console)
+    console.error("Esto es un error en JavaScript")
+    console.warn("Esto es un aviso")
+    console.info("Esto es un mensje informativo")
+    console.log("Un registro de lo que ha pasado en nuestra aplicación")
+
+    let nombre = "Zisko",
+      apellido = "Diaz",
+      edad = 29
+
+    console.log(nombre)
+    console.log(apellido)
+    console.log(edad)
+    console.log(nombre, apellido, edad)
+    console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años.`)
+    console.log(`Hola mi nombre es %s %s y tengo %d años.`, nombre, apellido, edad)
+    console.clear()
+    console.log(window)
+    console.log(document)
+    console.dir(window)
+    console.dir(document)
+    console.clear()
+
+    console.group("Cursos de @AUNNINGUNO en YouTube")
+    console.log("Curso de JavaScript")
+    console.log("Curso de Node.js")
+    console.log("Curso de PWAs")
+    console.log("Curso de Flexbox")
+    console.log("Curso de Diseño y Programación Web")
+    console.groupEnd();
+
+    console.groupCollapsed("Cursos de @AUNNINGUNO en YouTube")
+    console.log("Curso de JavaScript")
+    console.log("Curso de Node.js")
+    console.log("Curso de PWAs")
+    console.log("Curso de Flexbox")
+    console.log("Curso de Diseño y Programación Web")
+    console.groupEnd()
+    console.clear()
+    console.log(console)
+    console.table(Object.entries(console).sort())
+
+    const numeros = [1, 2, 3, 4, 5],
+      vocales = ["a", "e", "i", "o", "u"]
+
+    console.table(numeros)
+    console.table(vocales)
+
+    const perro = {
+      nombre: "Boni",
+      raza: "Boxer",
+      color: "cafe"
+    }
+    console.table(perro)
+    console.clear()
+
+    console.time('Cuanto tiempo tarda mi código')
+    const arreglo = Array(1000000);
+
+    for (let i = 0; i < arreglo.length; i++) {
+      arreglo[i] = i
+    }
+
+    console.timeEnd('Cuanto tiempo tarda mi código')
+    //console.log(arreglo)
+
+    console.clear()
+
+
+    for (let i = 0; i <= 100; i++) {
+      console.count("código for");
+      console.log(i)
+    }
+
+    console.clear()
+
+    let x = 3,
+      y = 2,
+      pruebaXY = "Se espera que X siempre sea menor que Y";
+
+    console.assert(x < y, { x, y, pruebaXY })
+
+    console.clear()
+
+    // Objeto date
+
+    console.log(Date())
+
+    let fecha = new Date()
+    console.log(fecha)
+    // Dia del mes
+    console.log (fecha.getDate())
+    // DIA DE LA SEMANA
+    console.log (fecha.getDay())
+    // mes
+    console.log (fecha.getMonth())
+    // año
+    console.log (fecha.getFullYear())
+    // hora
+    console.log (fecha.getHours())
+    // minutos
+    console.log (fecha.getMinutes())
+    // segundos
+    console.log (fecha.getSeconds())
+    // milisegundos
+    console.log (fecha.getMilliseconds())
+    // dia de la semana
+    console.log (fecha.getUTCDay())
+    // mes
+    console.log (fecha.getUTCMonth())
+    // año
+    console.log (fecha.getUTCFullYear())
+    // hora
+    console.log (fecha.getUTCHours())
+    // minutos
+    console.log (fecha.getUTCMinutes())
+    // segundos
+    console.log (fecha.getUTCSeconds())
+    // milisegundos
+    console.log (fecha.getUTCMilliseconds())
+    // dia de la semana
+    console.log (fecha.getTime())
+
+    console.log(fecha.toString())
+    console.log(fecha.toDateString())
+    console.log(fecha.toTimeString())
+    console.log(fecha.toLocaleString())
+    console.log(fecha.getTimezoneOffset())
+    console.log(Date.now())
+
+    console.clear()
+
+    // Objeto Math
+    console.log(Math)
+    console.log(Math.PI)
+    console.log(Math.E)
+    console.log(Math.abs(-200))
+    console.log(Math.ceil(4.4))
+    console.log(Math.floor(4.4))
+    console.log(Math.round(4.4))
+    console.log(Math.sqrt(64))
+    console.log(Math.pow(8, 2))
+    console.log(Math.sign(-5))
+    console.log(Math.min(1, 2, 3, 4, 5))
+    console.log(Math.max(1, 2, 3, 4, 5))
+    console.log(Math.random())
+    console.log(Math.random() * 100)
+
+
+    console.clear()
+    
+    // Operador Cortocircuito
+
+    
+
+    Cortocircuito OR -> Si una de las expresiones es verdadera, se devuelve la expresion, si no, se devuelve la otra.
+
+    Cortocircuito AND -> Si todas las expresiones son verdaderas, se devuelve la primera, si no, se devuelve la otra.
+                        cuando el valor d ela izq en la expresion siempre puede
+                        validarse, no importa el valor de la derecha.
+
+    
+
+    function saludar(nombre) {
+      nombre = nombre || "Desconocido"
+      console.log(`Hola ${nombre}`)
+    }
+
+    saludar("Pancho")
+    saludar()
+
+
+    console.clear()
+
+    // alertas , confirmaciones y promesas
+
+    console.log(window)
+    window.alert("Wena cabros")
+    window.confirm("Estas seguro?")
+    window.prompt("Ingresa tu nombre")
+
+    console.clear()
+
+    let alerta = alert("Wena cabros"),
+        confirmacion = confirm("Estas seguro?"),
+        aviso = prompt("Ingresa tu nombre")
+
+    console.log(alerta)
+    console.log(confirmacion)
+    console.log(aviso)
+    
+    
+
+    // Expresiones regulares
+
+    let cadena = "Lorem ipsum LoRem Lorem LOREM dolor sit amte lorem lorem lorem consectetum lorem"
+
+    //let expReg = new RegExp("lorem", "ig")
+    let expReg2 = /lorem/ig
+
+    //console.log(expReg.test(cadena))
+    //console.log(expReg.exec(cadena))
+    console.log(expReg2.test(cadena))
+    console.log(expReg2.exec(cadena))
+
+    
+
+    // funciones anominas autoejecutadas
+
+    // clasica
+    (function () {
+      console.log("Funcion IIFE")
+    }());
+
+    (function (d, w, c) {
+      console.log("Funcion IIFE 2")
+      console.log(d)
+      console.log(w)
+      console.log(c)
+      c.log("Este es un console.log chorizo")
+    }(document, window, console));
+
+    // crockford
+    ((function() {
+      console.log("Funcion IIFE crockford")
+    }()));
+
+    // unaria
+    +function () {
+      console.log("Funcion IIFE unario")
+    }();
+
+    // Facebook
+
+    !function(){
+      console.log("version facebook")
+    }();
+
+    */
+
+    
+
+  </script>
+</body>
+</html>
